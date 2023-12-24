@@ -1,18 +1,15 @@
 # React Expense Tracker
 
 A simple React application for tracking expenses. Fill out a form with a title, amount, and date, and the app will add the expense to a visual chart.
-
+Take a look to the app: https://react-expense-tracker-liart.vercel.app/
 ## Technologies Used
 
 - React v17.0.1
-- Chart.js (or any other chart library you might be using)
-- [Other dependencies, if applicable]
 
 ## Features
 
 - Add expenses with a title, amount, and date.
 - Visual representation of expenses using a chart.
-- [Additional features, if applicable]
 
 ## Getting Started
 
