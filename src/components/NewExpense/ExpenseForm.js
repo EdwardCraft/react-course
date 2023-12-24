@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./ExpenseForm.css";
 
-//when ever you update
 const ExpenseForm = (props) => {
   const [userIput, setUserIput] = useState({
     enterTitle: "",
@@ -10,28 +9,18 @@ const ExpenseForm = (props) => {
   });
 
   const titleChangeHandler = (event) => {
-    // If your state updates depends on the previws update
-    // this functios form es recomended.
     setUserIput((prevState) => {
       return { ...userIput, enterTitle: event.target.value };
     });
   };
 
   const amountChangeHandler = (event) => {
-    /*setUserIput({
-      ...userIput,
-      enterAmount: event.target.value,
-    });*/
     setUserIput((prevState) => {
       return { ...userIput, enterAmount: +event.target.value };
     });
   };
 
   const dateChangeHandler = (event) => {
-    /*setUserIput({
-      ...userIput,
-      enterDate: event.target.value,
-    });*/
     setUserIput((prevState) => {
       return { ...userIput, enterDate: event.target.value };
     });
@@ -45,7 +34,6 @@ const ExpenseForm = (props) => {
       date: new Date(userIput.enterDate),
     };
 
-    //To privide data to the father
     props.onSaveExpenseData(expenseData);
     clearUserInput();
   };
@@ -100,9 +88,3 @@ const ExpenseForm = (props) => {
 };
 
 export default ExpenseForm;
-
-/**
- *  Two Way bindings: means that not only litsen  to changes
- *  but also pass new value.
- *
- */
